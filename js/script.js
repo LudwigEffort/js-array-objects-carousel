@@ -65,7 +65,7 @@ images.forEach((element) => {
 images.forEach((element) => {
     //console.log(element.image)
     const eleImgThumb = document.createElement('img');
-    eleImgThumb.classList.add('thumbanil-img');
+    eleImgThumb.classList.add('thumbnail-img');
     eleImgThumb.src = `img/${element.image}`;
     if (!element) {
         eleImg.classList.add('active-thumb');
@@ -74,7 +74,7 @@ images.forEach((element) => {
 });
 
 const listEleImg = document.querySelectorAll('.slider-img');
-const listEleImgThumb = document.querySelector('.thumbanil-img');
+const listEleImgThumb = document.querySelector('.thumbnail-img');
 
 downButton.addEventListener('click', downBtn());
 
