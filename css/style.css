@@ -4,13 +4,16 @@
     box-sizing: border-box;
 }
 
-body    {
+.container {
     height: 100vh;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .slider-container {
-    margin: auto;
+    /* margin: auto; */
     height: 80%;
     width: 60%;
     max-width: 800px;
@@ -26,6 +29,12 @@ body    {
     object-fit: cover;
     object-position: center;
     display: none;
+}
+
+.thumbanils-container {
+    background-color: salmon;
+    max-width: 150px;
+    max-height: 400px;
 }
 
 .up, .down {
