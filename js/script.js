@@ -74,30 +74,33 @@ images.forEach((element) => {
 });
 
 const listEleImg = document.querySelectorAll('.slider-img');
-const listEleImgThumb = document.querySelector('.thumbnail-img');
+const listEleImgThumb = document.querySelectorAll('.thumbnail-img');
 
 downButton.addEventListener('click', downBtn());
 
 upButton.addEventListener('click', upBtn());
 
 function downBtn(){
-    listEleImg[activeIndex].classList.remove('active');
+    listEleImg[activeIndex].classList.remove('active')
+    listEleImgThumb[activeIndex].classList.remove('active-thumb');
     activeIndex++;
     if(activeIndex === listEleImg.length) {
         activeIndex = 0;
     }
     listEleImg[activeIndex].classList.add('active');
+    listEleImgThumb[activeIndex].classList.add('active-thumb');
     console.log(activeIndex);
     return downBtn; //perhaps the return needs to be inserted because the function has a variable that overwrite itself
 };
 
 function upBtn() {
     listEleImg[activeIndex].classList.remove('active');
+    listEleImgThumb[activeIndex].classList.remove('active-thumb');
     if(activeIndex === 0) {
         activeIndex = listEleImg.length;
     }
     activeIndex--;
     listEleImg[activeIndex].classList.add('active');
+    listEleImgThumb[activeIndex].classList.add('active-thumb');
     return upBtn;
 };
-
