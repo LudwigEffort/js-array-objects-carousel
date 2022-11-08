@@ -35,6 +35,8 @@ const images = [
 	},
 ];
 
+const clock = setInterval(autoSlider, 3000);
+
 const eleSlider = document.querySelector('.slider-container');
 
 //work
@@ -50,6 +52,8 @@ const startButton = document.querySelector('.btn-start');
 const reverseButton = document.querySelector('.btn-reverse');
 
 let activeIndex = 0;
+
+let counter = 0;
 
 images.forEach((element) => {
     //console.log(element.image)
@@ -80,6 +84,9 @@ downButton.addEventListener('click', downBtn());
 
 upButton.addEventListener('click', upBtn());
 
+reverseButton.addEventListener('click', reverseSum());
+
+
 function downBtn(){
     listEleImg[activeIndex].classList.remove('active')
     listEleImgThumb[activeIndex].classList.remove('active-thumb');
@@ -89,7 +96,6 @@ function downBtn(){
     }
     listEleImg[activeIndex].classList.add('active');
     listEleImgThumb[activeIndex].classList.add('active-thumb');
-    console.log(activeIndex);
     return downBtn; //perhaps the return needs to be inserted because the function has a variable that overwrite itself
 };
 
@@ -103,4 +109,14 @@ function upBtn() {
     listEleImg[activeIndex].classList.add('active');
     listEleImgThumb[activeIndex].classList.add('active-thumb');
     return upBtn;
+};
+
+function reverseSum() {  
+    counter++;
+    return;
+}
+
+
+function autoSlider(){
+    downBtn();
 };
