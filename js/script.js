@@ -36,10 +36,59 @@ const images = [
 ];
 
 const eleSlider = document.querySelector('.slider-container');
+const eleThum = document.querySelector('.thumbanils-container');
 
 const upButton = document.querySelector('.up');
 const downButton = document.querySelector('.down');
 
+let activeIndex = 0;
+
 images.forEach((element) => {
     //console.log(element.image)
+    const eleImg = document.createElement('img');
+    eleImg.classList.add('slider-img');
+    eleImg.src = `img/${element.image}`;
+    if (!element) {
+        eleImg.classList.add('active');
+    }
+    eleSlider.append(eleImg);
 });
+
+images.forEach((element) => {
+    //console.log(element.image)
+    const eleImgThumb = document.createElement('img');
+    eleImgThumb.classList.add('thumbanil-img');
+    eleImgThumb.src = `img/${element.image}`;
+    if (!element) {
+        eleImg.classList.add('active-thumb');
+    }
+    eleThum.append(eleImgThumb);
+});
+
+const listEleImg = document.querySelectorAll('.slider-img');
+
+downButton.addEventListener('click', downBtn());
+
+upButton.addEventListener('click', upBtn());
+
+function downBtn(){
+    listEleImg[activeIndex].classList.remove('active');
+    activeIndex++;
+    if(activeIndex === listEleImg.length) {
+        activeIndex = 0;
+    }
+    listEleImg[activeIndex].classList.add('active');
+    console.log(activeIndex);
+    return downBtn; //perhaps the return needs to be inserted because the function has a variable that overwrite itself
+};
+
+function upBtn() {
+    listEleImg[activeIndex].classList.remove('active');
+    if(activeIndex === 0) {
+        activeIndex = listEleImg.length;
+    }
+    activeIndex--;
+    listEleImg[activeIndex].classList.add('active');
+    return upBtn;
+};
+

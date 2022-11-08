@@ -35,6 +35,16 @@
     background-color: salmon;
     max-width: 150px;
     max-height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.thumbanil-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    filter: brightness(0.4);
 }
 
 .up, .down {
@@ -68,4 +78,8 @@
 
 .active {
     display: block;
+}
+
+.active-thumb {
+    filter: brightness(1);
 }
