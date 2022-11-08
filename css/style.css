@@ -95,3 +95,9 @@
 .active-thumb {
     filter: brightness(1);
 }
+
+.btn-start-reverse-container {
+    position:absolute;
+    left: 45%;
+    top: 70%;
+}

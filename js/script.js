@@ -46,6 +46,9 @@ const eleThum = document.querySelector('.thumbnails-container');
 const upButton = document.querySelector('.up');
 const downButton = document.querySelector('.down');
 
+const startButton = document.querySelector('.btn-start');
+const reverseButton = document.querySelector('.btn-reverse');
+
 let activeIndex = 0;
 
 images.forEach((element) => {
