@@ -74,6 +74,7 @@ images.forEach((element) => {
 });
 
 const listEleImg = document.querySelectorAll('.slider-img');
+const listEleImgThumb = document.querySelector('.thumbanil-img');
 
 downButton.addEventListener('click', downBtn());
 
