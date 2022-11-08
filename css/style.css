@@ -34,22 +34,22 @@
 /* If change class name (also into js), it break 'eleThumb' append  */
 
 /* Work */
-.thumbanils-container {
-    background-color: salmon;
-    max-width: 150px;
-    max-height: 400px;
-    display: flex;
-    flex-direction: column;
-}
-
-/* don't work */
-/* .thumbnails-container {
+/* .thumbanils-container {
     background-color: salmon;
     max-width: 150px;
     max-height: 400px;
     display: flex;
     flex-direction: column;
 } */
+
+/* don't work */
+.thumbnails-container {
+    background-color: salmon;
+    max-width: 150px;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+}
 
 .thumbanil-img {
     width: 100%;

@@ -38,10 +38,10 @@ const images = [
 const eleSlider = document.querySelector('.slider-container');
 
 //work
-const eleThum = document.querySelector('.thumbanils-container'); 
+// const eleThum = document.querySelector('.thumbanils-container'); 
 
 //don't work
-// const eleThum = document.querySelector('.thumbnails-container');
+const eleThum = document.querySelector('.thumbnails-container');
 
 const upButton = document.querySelector('.up');
 const downButton = document.querySelector('.down');
