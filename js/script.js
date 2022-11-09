@@ -85,7 +85,7 @@ downButton.addEventListener('click', downBtn());
 upButton.addEventListener('click', upBtn());
 
 reverseButton.addEventListener('click', reverseSum());
-
+console.log(counter);
 
 function downBtn(){
     listEleImg[activeIndex].classList.remove('active')
@@ -113,7 +113,7 @@ function upBtn() {
 
 function reverseSum() {  
     counter++;
-    return;
+    return reverseSum;
 }
 
 
