@@ -31,6 +31,16 @@
     display: none;
 }
 
+.title-container{
+    position: absolute;
+    background-color: aquamarine;
+    height: 50px;
+    width: 50px;
+    z-index: 40;
+    left: 10%;
+    top: 20%;
+}
+
 /* If change class name (also into js), it break 'eleThumb' append  */
 
 /* Work */

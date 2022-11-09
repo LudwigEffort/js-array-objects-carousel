@@ -58,12 +58,16 @@ let counter = 0;
 images.forEach((element) => {
     //console.log(element.image)
     const eleImg = document.createElement('img');
+    const eleTitleContainer = document.createElement('div');
     eleImg.classList.add('slider-img');
+    eleTitleContainer.classList.add('title-container');
     eleImg.src = `img/${element.image}`;
+    
     if (!element) {
         eleImg.classList.add('active');
     }
     eleSlider.append(eleImg);
+    eleSlider.append(eleTitleContainer);
 });
 
 images.forEach((element) => {
