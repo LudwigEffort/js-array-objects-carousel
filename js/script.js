@@ -39,6 +39,8 @@ const clock = setInterval(autoSlider, 3000);
 
 const eleSlider = document.querySelector('.slider-container');
 
+const eleTitleDiv = document.querySelectorAll('.title-container');
+
 //work
 // const eleThum = document.querySelector('.thumbanils-container'); 
 
@@ -58,17 +60,24 @@ let counter = 0;
 images.forEach((element) => {
     //console.log(element.image)
     const eleImg = document.createElement('img');
-    const eleTitleContainer = document.createElement('div');
+    //const eleTitle = document.createElement('h3');
     eleImg.classList.add('slider-img');
-    eleTitleContainer.classList.add('title-container');
     eleImg.src = `img/${element.image}`;
-    
+    //eleTitle = `${element.title}`; 
     if (!element) {
         eleImg.classList.add('active');
     }
     eleSlider.append(eleImg);
-    eleSlider.append(eleTitleContainer);
+    //eleTitleDiv.append(eleTitle);
 });
+
+// images.forEach((element) => {
+//     const eleTitle = document.createElement('h3');
+//     eleTitle = `${element.title}`;
+//     eleTitleDiv.append(eleTitle);
+// });
+
+
 
 images.forEach((element) => {
     //console.log(element.image)
